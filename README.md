@@ -1,11 +1,12 @@
 # Travel_Management — COVID-19 Network Travel Optimization (MATLAB)
-This code accompanies the paper:
-Talaei, M., Rikos, A. I., Olshevsky, A., White, L. F., & Paschalidis, I. Ch. (2025). *Network-Based Epidemic Control Through Optimal Travel and Quarantine Management*. **IEEE Transactions on Control of Network Systems**. https://doi.org/10.1109/TCNS.2025.3590383
-
 This repo provides MATLAB code to:
 1) build Massachusetts (MA) county inputs (population, initial rates, travel),
 2) optimize county travel rates τ via projected gradient descent to minimize the dominant eigenvalue of the infected system M(t₀,τ) under an L₁ budget and τ ≥ 0,
 3) simulate cumulative and active cases for multiple budgets B.
+
+## Citation
+This code accompanies our paper:
+Talaei, M., Rikos, A. I., Olshevsky, A., White, L. F., & Paschalidis, I. Ch. (2025). *Network-Based Epidemic Control Through Optimal Travel and Quarantine Management*. *IEEE Transactions on Control of Network Systems*. https://doi.org/10.1109/TCNS.2025.3590383
 
 ## Folder layout
 ```text
@@ -38,8 +39,8 @@ Travel_Management/
   - `Population_MA.xlsx` — columns **Geographic Area**, **2020 Census**
   - `cbg_fips_codes.csv` — columns include **state_fips**, **county_fips**, **county**
   - `us-counties-2020.csv` — 2020 cumulative cases and deaths (NYT: https://doi.org/10.34740/kaggle/dsv/8581321)
-  - Flows (local only, not tracked): put daily CSVs under `Datasets/2020_flows/`, e.g.
-    `Datasets/2020_flows/daily_county2county_2020_08_01.csv`
+  - Flows: from [COVID19USFlows-DailyFlows]([https://github.com/ryansmcgee/COVID19USFlows-DailyFlows](https://github.com/Mah-Tala/COVID19USFlows-DailyFlows). Place daily CSVs under `Datasets/2020_flows/`, e.g.:
+  `Datasets/2020_flows/daily_county2county_2020_08_01.csv`
 
 ## How to run (exact order)
 
@@ -71,3 +72,8 @@ run Covid19_active_MA.m          % plots active cases for B ∈ {15,20,22,25}
 ## Notes
 If you see “file not found”, ensure your MATLAB current folder matches the script’s folder.
 Datasets/2020_flows/ and all .mat outputs are excluded from git by .gitignore.
+
+## Contact
+Mahtab Talaei - [@Email](mtalaei@bu.edu)  
+
+## Cite
