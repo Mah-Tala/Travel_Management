@@ -75,5 +75,3 @@ Datasets/2020_flows/ and all .mat outputs are excluded from git by .gitignore.
 
 ## Contact
 Mahtab Talaei - [@Email](mtalaei@bu.edu)  
-
-## Cite
