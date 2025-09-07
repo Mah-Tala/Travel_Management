@@ -1,0 +1,12 @@
+# Derived outputs
+*.mat
+Datasets/Massachusetts_county/
+
+# Large external flows (keep local only)
+Datasets/2020_flows/
+
+# OS / MATLAB junk
+.DS_Store
+*.asv
+*.mex*
+*.fig
