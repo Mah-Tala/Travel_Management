@@ -62,14 +62,14 @@ end
 
 % --- Convert flows to time spent outside (assumptions below) --------------
 in_county_trip   = 1;  % time weight for trips within the same county
-out_conty_traip  = 3;  % (typo kept as-is) time weight for trips to other counties
+out_county_traip  = 3;  % time weight for trips to other counties
 
 diag_inds    = logical(eye(size(pop_flows)));  % diagonal (i==j)
 offdiag_inds = ~diag_inds;                     % off-diagonal (i~=j)
 
 time_outside = pop_flows;
 time_outside(diag_inds)    = pop_flows(diag_inds)    * in_county_trip;
-time_outside(offdiag_inds) = pop_flows(offdiag_inds) * out_conty_traip;
+time_outside(offdiag_inds) = pop_flows(offdiag_inds) * out_county_traip;
 
 % --- Tau: time outside per capita ----------------------------------------
 tau = time_outside ./ population;
