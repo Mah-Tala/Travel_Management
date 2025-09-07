@@ -1,4 +1,4 @@
-# Travel_Management — COVID-19 Network Travel Optimization (MATLAB)
+# COVID-19 Network Travel Optimization (MATLAB)
 This repo provides MATLAB code to:
 1) build Massachusetts (MA) county inputs (population, initial rates, travel),
 2) optimize county travel rates τ via projected gradient descent to minimize the dominant eigenvalue of the infected system M(t₀,τ) under an L₁ budget and τ ≥ 0,
