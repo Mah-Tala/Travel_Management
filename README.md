@@ -1,4 +1,6 @@
 # Travel_Management — COVID-19 Network Travel Optimization (MATLAB)
+This code accompanies the paper:
+Talaei, M., Rikos, A. I., Olshevsky, A., White, L. F., & Paschalidis, I. Ch. (2025). *Network-Based Epidemic Control Through Optimal Travel and Quarantine Management*. **IEEE Transactions on Control of Network Systems**. https://doi.org/10.1109/TCNS.2025.3590383
 
 This repo provides MATLAB code to:
 1) build Massachusetts (MA) county inputs (population, initial rates, travel),
