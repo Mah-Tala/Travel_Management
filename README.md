@@ -26,7 +26,7 @@ Travel_Management/
    ├─ us-counties_1.csv                # deaths (NYT format)
    ├─ 2020_flows/                      # large; kept local (gitignored)
    └─ Massachusetts_county/April/      # outputs (.mat) created by scripts
-
+```
 > All scripts use relative paths. Run each from its own folder (shown below).
 
 ## Requirements
@@ -53,19 +53,19 @@ run generation_initial_rate_MA.m % writes: .../initial_rate_04_01.mat
 
 % C) travel/time_outside (uses flows CSV)
 run generation_tau.m             % writes: .../travel.mat
-
+```
 ### 2) Optimize τ for budgets B
 ```matlab
 cd ../tau_optimizer
 % In optimal_tau_MA.m set B (e.g., 15, 20, 22, 25) near the top
 run optimal_tau_MA.m             % writes: .../optimal_tau_B<XX>.mat
-
+```
 ### 3) Simulate cumulative & active cases
 ```matlab
 cd ..
 run Covid19_cumulative_MA.m      % plots cumulative cases for B ∈ {15,20,22,25}
 run Covid19_active_MA.m          % plots active cases for B ∈ {15,20,22,25}
-
+```
 ## Notes
 If you see “file not found”, ensure your MATLAB current folder matches the script’s folder.
 Datasets/2020_flows/ and all .mat outputs are excluded from git by .gitignore.
